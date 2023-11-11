@@ -1,0 +1,53 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Recipe App</title>
+	<link rel="stylesheet" href="{%static 'index.css'%}">
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+</head>
+
+<body>
+	<header class="bg-light">
+		<h1><a href="{% url 'home' %}">Recipe App</a></h1>
+
+		<nav>
+			<ul>
+				
+				{% if user.is_authenticated %}
+					<li><a href="{%url 'home'%}">Home</a></li>
+					<li><a href="{%url 'add_recipe'%}">Add Recipe</a></li>
+					<li><a href="{%url 'auth:logout'%}">Logout</a></li>
+				{% else %}
+					<li><a href="{%url 'home'%}">Home</a></li>
+					<li><a href="{%url 'auth:register'%}">Sign Up</a></li>
+					<li><a href="{%url 'auth:login_page'%}">Login</a></li>
+				{% endif %}
+					
+			</ul>
+		</nav>
+		<form>
+			<input type="text" placeholder="Search for recipes..." class="search-input">
+			<button type="submit"  id="search" class="btn-primary btn">Search</button>
+		</form>
+	</header>
+  <div class="main">
+	{% block content%}
+    {%endblock content%}
+  </div>
+    <footer>
+		<section id="categories">
+			<h2>Categories</h2>
+			<ul>
+				<li><a href="{%url 'appetizers'%}">Appetizers</a></li>
+				<li><a href="{%url 'entrees'%}">Entrees</a></li>
+				<li><a href="{%url 'desserts'%}">Desserts</a></li>
+			</ul>
+		</section>
+		<p>Copyright © Recipe App</p>
+	</footer>
+	<script src="index.js"></script>
+</body>
+
+</html>

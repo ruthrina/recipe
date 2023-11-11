@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+<main>
+    <section id="recipes">
+        <div class="recipe-list">
+            
+            {% for recipe in desserts %}
+            <div class="card">
+                <div class="card-img">
+                    
+                        <img src="{{recipe.image.url}}">
+                    </a>
+                </div>
+                <div class="card-detail">
+                    <a href="{% url 'recipe_detail' pk=recipe.id%}">
+                        <h3>{{recipe.name}}</h3>
+                    </a>
+                    <p>{{recipe.detail|truncatewords:20}}</p>
+                </div>
+            </div>
+            {% endfor %}
+                
+        </div>      
+    </section>
+</main>
+
+{%endblock content%}

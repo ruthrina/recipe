@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <center>
+        <img src="{{recipe.image.url}}" alt="recipe image" width="400" height="400">
+    </center>
+    <h1>{{ recipe.name }}</h1>
+    <br>
+    <span><b>Created By: {{recipe.created_by}}</b></span>
+    <br>
+
+    {{ recipe.detail }}
+    <br>
+    <br>
+    <div class="options">
+        {% if recipe.created_by == user%}
+        <a href="{% url 'recipe_update' pk=recipe.id%}" class="update-btn">Update Recipe</a>
+        <a href="{% url 'recipe_delete' pk=recipe.id%}" class="delete-btn">Delete Recipe</a>
+        {% endif %}
+    </div>
+        
+{% endblock content %}
+    

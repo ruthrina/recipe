@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
+        <h1>Add Recipe</h1>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add recipe" class="btn-primary">
+    </form>
+</div>
+{%endblock content%}

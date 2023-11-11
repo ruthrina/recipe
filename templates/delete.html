@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Delete Recipe</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete" class="delete-btn">
+        <a href="{% url 'home' %}" class="btn-primary">Cancel</a>
+    </form>
+{% endblock content %}
+    

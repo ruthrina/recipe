@@ -1,0 +1,121 @@
+/* Style for the header */
+header {
+	background-color: #f2f2f2;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Style for the search bar */
+form {
+	display: flex;
+	margin-top: 20px;
+}
+
+input[type="text"] {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	margin-right: 10px;
+}
+
+button[type="submit"] {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* Style for the navigation menu */
+nav {
+	margin-top: 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav ul li {
+	margin-right: 10px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #007bff;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+	background-color: #007bff;
+	color: #fff;
+}
+
+/* Style for the categories section */
+#categories {
+	margin-top: 20px;
+}
+
+#categories h2 {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+#categories ul {
+	list-style: none;
+}
+
+#categories ul li {
+	margin-bottom: 10px;
+}
+
+#categories ul li a {
+	text-decoration: none;
+	color: darkblue;
+	font-size: 50px;
+}
+
+#categories ul li a:hover {
+	text-decoration: underline;
+}
+
+/* Style for the recipes section */
+
+
+
+#header {
+	background-image: url('header-background.jpg');
+	background-size: cover;
+	background-position: center;
+}
+button:hover {
+	animation: pulse 0.5s infinite;
+}
+
+
+.home{
+	background-color: grey;
+	background-size: cover;
+    overflow: hidden;
+	opacity: 100%;
+  
+
+	
+}  
+footer{
+    margin-top: 50px;
+    font-size: 40px;
+    color: black;
+}
+.input{
+	padding:20px;
+}
+input[type='password']{
+	padding: 20px;
+}
